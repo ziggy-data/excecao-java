@@ -1,0 +1,33 @@
+
+public class FluxoComTratamento {
+
+	    public static void main(String[] args) {
+	        System.out.println("Ini do main");
+	        try {
+	        metodo1();
+	    	} catch(ArithmeticException | NullPointerException ex) {
+        	String msg = ex.getMessage();
+        	System.out.println("Exception " + msg);
+        	ex.printStackTrace();
+        }
+	        System.out.println("Fim do main");
+	    }
+	 
+	    private static void metodo1() {
+	        System.out.println("Ini do metodo1");
+	        metodo2();
+	        System.out.println("Fim do metodo1");
+	    }
+
+	    private static void metodo2() {
+	        System.out.println("Ini do metodo2");
+	        throw new ArithmeticException("DEU RUIM");
+	        //new cria o objeto e retorna uma referencia e 
+	        //    joga (throw) na pilha sendo uma bomba
+	        //é obrigatorio o uso do throw    
+	        }
+	        //System.out.println("Fim do metodo2");        
+	    
+	
+
+}
